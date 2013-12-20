@@ -1,8 +1,8 @@
-### DPS907 and WSA500 for the Fall 2013 semester
+### BTI420 for the Winter 2014 semester
 
 **Code examples**
 
-Organized by week. Each "week" page has a read me file that describes the example.
+Organized by week. Each "week" page has a README file that describes the examples.
 
 You can browse the code online. 
 
