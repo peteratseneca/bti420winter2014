@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slides</title>
+    <style>
+        body {
+            font-size: 3.0em;
+            background: linear-gradient(to right, white, dodgerblue);
+            margin-left: 0.5em;
+        }
+
+        ol li, ul li {
+            margin-left: 1.0em;
+        }
+
+        a:link, a:hover, a:active, a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        .next {
+            padding: 0.5em;
+            background-color: lightgray;
+            border: 1px solid black;
+            font-size: 0.5em;
+        }
+
+        div h3 {
+            margin-top: 25.0em;
+            padding-top: 0.5em;
+        }
+
+        div h4 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <a class="next" href="#title">start</a>
+
+    <div id="title">
+        <h3>BTI420</h3>
+        <p>Web Programming on Windows [Servers]</p>
+        <ul>
+            <li>Section A - Elliott Coleshill</li>
+            <li>Section B - Peter McIntyre</li>
+        </ul>
+        <a class="next" href="#frameworks">next</a>
+    </div>
+
+    <div id="frameworks">
+        <h3>BTI320 - "frameworks" topic</h3>
+        <p>Frameworks in general</p>
+        <p>Brief study of Yii</p>
+        <h4>What was the biggest benefit of using a framework?</h4>
+        <a class="next" href="#templating">next</a>
+    </div>
+
+    <div id="templating">
+        <h3>BTI320 - "templating" topic</h3>
+        <p>Smarty, a PHP Template Engine</p>
+        <h4>What was the biggest benefit of templating?</h4>
+        <a class="next" href="#datapers">next</a>
+    </div>
+
+    <div id="datapers">
+        <h3>BTI320 - data / database topic</h3>
+        <p>In general, data stored in a relational database management system</p>
+        <h4>What PHP functionality did you use to work with data in a database?</h4>
+        <a class="next" href="#security">next</a>
+    </div>
+
+    <div id="security">
+        <h3>BTI320 - security topic</h3>
+        <p>Login functionality</p>
+        <p>Secure coding techniques</p>
+        <a class="next" href="#othertopics">next</a>
+    </div>
+
+    <div id="othertopics">
+        <h3>BTI320 - other topics</h3>
+        <p>Other topics, including...</p>
+        <ul>
+            <li>Object-oriented programming</li>
+            <li>Managing sessions and application state</li>
+            <li>HTML Forms processing</li>
+            <li>Input data validation</li>
+        </ul>
+        <a class="next" href="#devenv">next</a>
+    </div>
+
+    <div id="devenv">
+        <h3>Your development environment</h3>
+        <p>Visual Studio 2013 (aka VS)</p>
+        <p>Web browsers (IE, Firefox, Chrome)</p>
+        <p>Occasionally, an HTTP inspector (Web-Sniffer, Fiddler)</p>
+        <a class="next" href="#deplenv">next</a>
+    </div>
+
+    <div id="deplenv">
+        <h3>Deployment environment</h3>
+        <p>During development: Your computer</p>
+        <p>In production: a host (e.g. a Windows Azure web site)</p>
+        <a class="next" href="#webdevnow">next</a>
+    </div>
+
+    <div id="webdevnow">
+        <h3>Modern web app development</h3>
+        <p>Two dominant web app frameworks:</p>
+        <ol>
+            <li>ASP.NET</li>
+            <li>PHP</li>
+        </ol>
+        <p>In the future? Who knows (maybe Node.js!)</p>
+        <p>For modern web apps, the MVC design pattern is now the <em>de facto</em> web app development design pattern</p>
+        <a class="next" href="#mvcintro">next</a>
+    </div>
+
+    <div id="mvcintro">
+        <h3>ASP.NET MVC introduction</h3>
+        <p>M - model - data, and operations on data<br />
+        V - view - a screen of content (user interface)<br />
+        C - controller - manages one or more views</p>
+        <p>Two <em>important things</em> new devs must know:</p>
+        <ul>
+            <li>Front controller pattern </li>
+            <li>Programming by convention</li>
+        </ul>
+        <a class="next" href="#ctrlr1">next</a>
+    </div>
+
+    <div id="ctrlr1">
+        <h3>Controller</h3>
+        <p>A C# class, in a source code file</p>
+        <p>Manages one or more views</p>
+        <p>VS template may add code - our HelloWorld example includes three methods, Index, About, and Contact</p>
+        <p>These methods respond to HTTP GET requests (from browsers)</p>
+        <p>A method returns a result that is often rendered in a View</p>
+        <a class="next" href="#view1">next</a>
+    </div>
+
+    <div id="view1">
+        <h3>View</h3>
+        <p>A source code file that acts as a container</p>
+        <p>A View includes HTML5 <em>markup</em>...</p>
+        <p>...and <em>code expressions</em> that place data into the markup</p>
+        <a class="next" href="#model1">next</a>
+    </div>
+
+    <div id="model1">
+        <h3>Model</h3>
+        <p>Your app's data, and operations on the data</p>
+        <p>Data is modelled as C# classes</p>
+        <p>We work with <em>objects</em>, and <em>collections of objects</em></p>
+        <p>We treat data as though it's always in-memory; C# has rich language-integrated query (LINQ) functionality</p>
+        <p>We don't care much about the persistent store format</p>
+        <a class="next" href="#handson1">next</a>
+    </div>
+
+    <div id="handson1">
+        <h3>Let's write some code</h3>
+        <p>Study the "HelloWorld" project</p>
+        <p>Begin to learn C#</p>
+        <p>Create a "console" project to help you learn the language and the .NET Framework classes</p>
+        <p>Your first C# programming task?<br />Learn <em>string - number</em> conversions (to and from)</p>
+        <a class="next" href="#end">next</a>
+    </div>
+
+    <div id="end">
+        <h3></h3>
+        <p>(end)</p>
+        <a class="next" href="#top">next</a>
+    </div>
+
+    <div>
+        <h3>&nbsp;</h3>
+    </div>
+
+</body>
+</html>
