@@ -1,0 +1,30 @@
+﻿@model Personalize.Controllers.Person
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Personalize</h1>
+    <p class="lead">Get started by delivering simple data to a view</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Study these features</h2>
+        <p>
+            View model classes; source code file named "Home_vm.cs" is in the Controllers folder.
+        </p>
+        <p>In HomeController.cs, the Index() method creates a custom object, and passes it to the Index view.</p>
+        <p>The Index view dereferences the object's properties, and displays them (to the right).</p>
+        <p>The About and Contact pages have been personalized, by editing controller methods, and the views</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Data delivery</h2>
+        <p>Here's the passed-in Person object:</p>
+        <p>@Model.GivenNames @Model.LastName, identifier @Model.Id, is @Model.Age years old.</p>
+        <p>@Model.FullName(), identifier @Model.Id, is @Model.Age years old.</p>
+        @{string nameInfo = string.Format("{0}, identifier {1}, is {2} years old.", Model.FullName(), Model.Id, Model.Age);}
+        <p>@nameInfo</p>
+    </div>
+</div>

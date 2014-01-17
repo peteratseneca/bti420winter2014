@@ -1,14 +1,18 @@
 ### Week 1 code examples
 
-**Example1Name**
+**Introduction**
 
 Results from doing File > New > Project. 
-Unmodified, no changes. 
+Changed only the /Views/Home/Index.cshtml view (so that it displays useful information).
 Study its structure - this is a typical ASP.NET MVC project.
 
-**Example2Name**
+**Personalize**
 
-Brief description.
+Deliver data to a view. Implements most of the Lab 0 specification.
 Bullet point intro:
-- point 1
-- point 2
+- view model class for a custom object
+- create and configure the custom object
+- display the object's properties in a view
+- personalized About and Contact pages
+
+
