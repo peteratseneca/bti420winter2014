@@ -9,7 +9,7 @@ Study its structure - this is a typical ASP.NET MVC project.
 **Personalize**
 
 Deliver data to a view. Implements most of the Lab 0 specification.
-Bullet point intro:
+Features:
 - view model class for a custom object
 - create and configure the custom object
 - display the object's properties in a view
