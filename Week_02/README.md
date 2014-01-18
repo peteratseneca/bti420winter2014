@@ -33,6 +33,25 @@ Features:
 - one-to-many
 - create associated objects, access data within
 
+**PersistDataInMemory**
+
+Use ASP.NET Session State to save data during a user's interactive session.
+
+Features:
+- int, string, collection persistence 
+- test existence to prevent exceptions
+- round-trip data: create, save, fetch
+
+**IntroToLINQ**
+
+Introduction to C# language-integrated query.
+
+Features:
+- querying collections
+- simple collection of strings
+- collection of complex/custom objects
+- popular query methods
+
 **Forms**
 
 (will be posted on Sunday)
