@@ -16,7 +16,10 @@ Features:
 
 **Collections**
 
-(will be posted on Saturday morning)
+Introduction to collections.
+Features:
+- console app introduces the concepts and techniques
+- web app shows a typical way to render a collection
 
 **Forms**
 
