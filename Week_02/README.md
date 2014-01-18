@@ -52,6 +52,11 @@ Features:
 - collection of complex/custom objects
 - popular query methods
 
-**Forms**
+**IntroToForms**
 
-(will be posted on Sunday)
+Get data from the user, into your app.
+
+Features:
+- get data from the URI
+- simple HTML Form handling
+- strongly-typed view model, and model validation
