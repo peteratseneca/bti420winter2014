@@ -1,0 +1,17 @@
+﻿@model HTMLFormElementsBuiltIn.Controllers.Product
+
+@{
+    ViewBag.Title = "TextArea";
+}
+
+<h2>TextArea</h2>
+
+<p>HTML textarea, used for larger amounts of text entry</p>
+
+<div id="textarea">
+    <form action="http://formpost.azurewebsites.net/home/test" method="post" target="_blank">
+        <p>Product name:<br /><input type="text" name="Name" autofocus /></p>
+        <p>Lengthy description:<br /><textarea name="Description"></textarea></p>
+        <p><input type=submit value="Post and inspect data" /></p>
+    </form>
+</div>

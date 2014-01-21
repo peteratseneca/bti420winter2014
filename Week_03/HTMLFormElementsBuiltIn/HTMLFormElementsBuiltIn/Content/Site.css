@@ -1,0 +1,88 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* ############################################################ */
+
+#textarea input[type=text], #textarea textarea, #ddl input[type=text], 
+#lbsingle input[type=text], #rbl input[type=text], #lbmultiple input[type=text],
+#cbl input[type=text] {
+    max-width: 50%;
+    width: 33%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+#ddl select, #lbsingle select, #lbmultiple select {
+    max-width: 50%;
+    width: 20%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+#textarea input[type=text], #ddl select, #ddl input[type=text], 
+#lbsingle input[type=text], #rbl input[type=text], #lbmultiple input[type=text],
+#cbl input[type=text] {
+    height: 2.0em;
+}
+
+#textarea textarea {
+    height: 10.0em;
+}
+
+#ddl, #lbsingle, #rbl, #lbmultiple, #cbl {
+    padding: 1.0em;
+}
+
+#ddl, #rbl, #lbmultiple {
+    background-color: whitesmoke;
+}
+
+.cblItem {
+    width: 8.0em;
+    display: inline-block;
+    /*float: left;*/
+}
+
+#cbl input[type=submit] {
+    clear: both;
+}

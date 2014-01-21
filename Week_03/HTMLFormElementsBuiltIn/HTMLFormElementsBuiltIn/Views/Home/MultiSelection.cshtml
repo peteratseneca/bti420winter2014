@@ -1,0 +1,48 @@
+﻿@model HTMLFormElementsBuiltIn.Controllers.ProductWithColours
+
+@{
+    ViewBag.Title = "MultiSelection";
+    var colours = Model.Colours.ToList();
+}
+
+<h2>MultiSelection</h2>
+
+<p>
+    Elements that enable selection of multiple items:<br />
+    List box (in multiple-select mode), and check box group
+</p>
+<hr />
+
+<div id="lbmultiple">
+    <form action="http://formpost.azurewebsites.net/home/test" method="post" target="_blank">
+    @*<form action="/home/multiselection" method="post">*@
+            <p>Product name:<br /><input type="text" name="Name" autofocus /></p>
+            <p>
+                Colour - check zero ore more (Ctrl+click):<br />
+                <select name="Colours" size="8" multiple>
+                    @foreach (var size in colours)
+                    {
+                        <option>@size</option>
+                    }
+                </select>
+            </p>
+            <p><input type=submit value="Post and inspect data" /></p>
+        </form>
+</div>
+
+<hr />
+
+<div id="cbl">
+    <form action="http://formpost.azurewebsites.net/home/test" method="post" target="_blank">
+        <p>Product name:<br /><input type="text" name="Name" autofocus /></p>
+        <p>
+            Size:<br />
+            @foreach (var colour in colours)
+            {
+                <div class="cblItem"><input type="checkbox" name="Size" value="@colour" /> @colour</div>
+            }
+        </p>
+        <p><input type=submit value="Post and inspect data" /></p>
+    </form>
+</div>
+

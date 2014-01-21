@@ -1,0 +1,68 @@
+﻿@model HTMLFormElementsBuiltIn.Controllers.ProductWithSize
+
+@{
+    ViewBag.Title = "SingleSelection";
+    var sizes = Model.Sizes.ToList();
+}
+
+<h2>SingleSelection</h2>
+
+<p>Elements that enable selection of a single item:<br />
+    Drop-down list, list box (in single-select mode), and radio button group</p>
+<hr />
+
+<div id="ddl">
+    <form action="http://formpost.azurewebsites.net/home/test" method="post" target="_blank">
+        <p>Product name:<br /><input type="text" name="Name" autofocus /></p>
+        <p>
+            Size:<br />
+            <select name="Size">
+                @foreach (var size in sizes)
+                {
+                    <option>@size</option>
+                }
+            </select>
+        </p>
+        <p><input type=submit value="Post and inspect data" /></p>
+    </form>
+</div>
+
+<hr />
+
+<div id="lbsingle">
+    <form action="http://formpost.azurewebsites.net/home/test" method="post" target="_blank">
+        <p>Product name:<br /><input type="text" name="Name" autofocus /></p>
+        <p>
+            Size:<br />
+            <select name="Size" size="3">
+                @{
+                    for (int i = 0; i < sizes.Count; i++)
+                    {
+                        <option @(i == 0 ? "selected" : "")>@sizes[i]</option>
+                    }
+                    // Although this looks awkward, you needed to see how to code
+                    // a list with one of the items pre-selected
+                }
+            </select>
+        </p>
+        <p><input type=submit value="Post and inspect data" /></p>
+    </form>
+</div>
+
+<div id="rbl">
+    <form action="http://formpost.azurewebsites.net/home/test" method="post" target="_blank">
+        <p>Product name:<br /><input type="text" name="Name" autofocus /></p>
+        <p>
+            Size:<br />
+            @{
+                for (int i = 0; i < sizes.Count; i++)
+                {
+                    <input type="radio" name="Size" value="@sizes[i]" @(i == 1 ? "checked" : "") /> @sizes[i]<br />
+                }
+                // Although this looks awkward, you needed to see how to code
+                // a radio button group with one of the items pre-selected
+            }
+        </p>
+        <p><input type=submit value="Post and inspect data" /></p>
+    </form>
+</div>
