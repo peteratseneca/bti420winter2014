@@ -20,3 +20,11 @@ Features:
 - 'Manager' class for data operations
 - scaffolded controller
 - scaffolded views for List, Create, Details, Edit
+
+**HTMLHelpers**
+
+Learn to code views with less effort.
+
+Features:
+- simple helpers
+- helpers that work with models

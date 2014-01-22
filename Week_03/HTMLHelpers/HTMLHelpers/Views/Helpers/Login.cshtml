@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    HTMLHelpers.Controllers.LoginData loginData;
+    if (TempData["loginData"]==null)
+    {
+        loginData = new HTMLHelpers.Controllers.LoginData();
+    }
+    else
+    {
+        loginData = TempData["loginData"] as HTMLHelpers.Controllers.LoginData;
+    }
+}
+
+<h2>Login</h2>
+
+<h3>Plain HTML</h3>
+<p>Enter any credentials, and click the Login button</p>
+<form action="/helpers/login" method="post">
+    <p>User name:<br /><input name="Username" type="text" autofocus /></p>
+    <p>Password:<br /><input name="Password" type="password" /></p>
+    <input type="submit" value="Login" />
+</form>
+
+<hr />
+
+<h3>Using HTML Helpers</h3>
+<p>Enter any credentials, and click the Login button</p>
+@using (Html.BeginForm())
+{
+    <p>User name:<br />@Html.TextBox("Username")</p>
+    <p>Password:<br />@Html.Password("Password")</p>
+    <input type="submit" value="Login" />
+}
+
+<hr />
+
+<p>@loginData.Username @loginData.Password</p>

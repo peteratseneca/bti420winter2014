@@ -1,0 +1,43 @@
+﻿@model HTMLHelpers.Controllers.ProductWithSize
+
+@{
+    ViewBag.Title = "Size";
+    HTMLHelpers.Controllers.ProductWithSize product;
+    if (TempData["product"] == null)
+    {
+        product = new HTMLHelpers.Controllers.ProductWithSize();
+    }
+    else
+    {
+        product = TempData["product"] as HTMLHelpers.Controllers.ProductWithSize;
+    }
+}
+
+<h2>Add Product With Size Info, v1</h2>
+
+@using (Html.BeginForm())
+{
+    <p>@Html.EditorForModel()</p>
+    <input type="submit" value="Add product" />
+}
+
+<hr />
+
+<h2>Add Product With Size Info, v2</h2>
+
+@using (Html.BeginForm())
+{
+    <p>Product name:<br />
+    @Html.EditorFor(m => m.Name)</p>
+    
+    <p>@Html.LabelFor(m => m.Description)<br />
+    @Html.EditorFor(m => m.Description)</p>
+    
+    <p>@Html.LabelFor(m=>m.Size)<br />
+    @Html.DropDownListFor(m => m.Size, new SelectList(Model.Sizes))</p>
+    
+    <input type="submit" value="Add product" />
+}
+
+<hr />
+<p>@product.Name @product.Description @product.Size</p>
