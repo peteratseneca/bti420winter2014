@@ -1,9 +1,9 @@
 ### Week 4 code examples
 
-**PersistenceIntro**
+**PersistIntro**
 
 First example that uses a persistent store.
 
 Features:
 - Entity Framework
-- (more to come)
+- one entity 
