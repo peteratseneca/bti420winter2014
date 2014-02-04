@@ -1,0 +1,76 @@
+﻿@model DataAnnotationsBasic.Controllers.VehicleAddForm
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create a new vehicle</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>VehicleAddForm</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        @* The following drop-down list was added*@
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Manufacturer</label>
+            <div class="col-md-10">
+                @Html.DropDownList("ManufacturerId", Model.Manufacturers)
+            </div>
+        </div>
+
+        @* End of manual edits*@
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Model, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Model)
+                @Html.ValidationMessageFor(model => model.Model)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Trim, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Trim)
+                @Html.ValidationMessageFor(model => model.Trim)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ModelYear, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ModelYear)
+                @Html.ValidationMessageFor(model => model.ModelYear)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MSRP, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MSRP)
+                @Html.ValidationMessageFor(model => model.MSRP)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
