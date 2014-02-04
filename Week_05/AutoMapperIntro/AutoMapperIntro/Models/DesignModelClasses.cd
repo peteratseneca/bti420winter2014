@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="AutoMapperIntro.Models.Manufacturer">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAgAAAAAAQAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DesignModelClasses.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Vehicles" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AutoMapperIntro.Models.Vehicle">
+    <Position X="7" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAAgAAAAAAAAAAAAAAAACAAQAgAAAAAAAA=</HashCode>
+      <FileName>Models\DesignModelClasses.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Manufacturer" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
