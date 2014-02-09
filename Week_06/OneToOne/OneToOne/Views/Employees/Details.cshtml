@@ -1,0 +1,84 @@
+﻿@model OneToOne.Controllers.EmployeeBaseWithAddresses
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmployeeBaseWithAddresses</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GivenNames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GivenNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <hr />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeAddress)
+        </dt>
+
+        <dd>
+            @{
+                // Check if null
+                if (Model.HomeAddress == null)
+                { 
+                    <text>(none yet)</text>
+                }
+                else
+                {
+                    var a = Model.HomeAddress;
+                    @a.AddressLine1<br />
+                    if (!string.IsNullOrEmpty(a.AddressLine2))
+                    { @a.AddressLine2<br /> }
+                    @a.CityAndProvince<br />
+                    @a.PostalCode
+                }
+            }
+        </dd>
+
+        <hr />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkAddress)
+        </dt>
+
+        <dd>
+            @{
+                // Check if null
+                if (Model.WorkAddress == null)
+                { 
+                    <text>(none yet)</text>
+                }
+                else
+                {
+                    var a = Model.WorkAddress;
+                    @a.AddressLine1<br />
+                    if (!string.IsNullOrEmpty(a.AddressLine2))
+                    { @a.AddressLine2<br /> }
+                    @a.CityAndProvince<br />
+                    @a.PostalCode
+                }
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

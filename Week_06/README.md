@@ -16,3 +16,11 @@ Features:
 - problem domain is "employees"
 - an employee can have a supervisor
 - an employee can supervise other employees
+
+**OneToOne**
+
+Introduction to one-to-one associations.
+
+Features:
+- problem domain is "employees", who may have one or two "addresses"
+- an address cannot exist on its own - it must be associated with an employee
