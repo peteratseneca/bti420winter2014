@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SelfOneToMany.Controllers.EmployeeBaseWithEmployees>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee List</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GivenNames)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ReportsToEmployeeId)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.ReportsToEmployee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeesSupervised)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GivenNames)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ReportsToEmployeeId)
+            </td>*@
+            <td>
+                @{
+                    // Must guard against a null object
+                    if (item.ReportsToEmployee != null)
+                    {
+                        <text>@item.ReportsToEmployee.GivenNames @item.ReportsToEmployee.LastName</text>
+                    }
+                }
+            </td>
+            <td>
+                @foreach (var emp in item.EmployeesSupervised)
+                {
+                    <text>@emp.GivenNames @emp.LastName</text><br />
+                }
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            </td>
+        </tr>
+    }
+
+</table>

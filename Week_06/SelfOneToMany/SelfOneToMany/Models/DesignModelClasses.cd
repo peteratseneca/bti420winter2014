@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="SelfOneToMany.Models.Employee">
+    <Position X="3.5" Y="0.5" Width="4" />
+    <AssociationLine Name="ReportsToEmployee" Type="SelfOneToMany.Models.Employee" ManuallyRouted="true">
+      <Path>
+        <Point X="4.888" Y="2.632" />
+        <Point X="4.888" Y="2.903" />
+        <Point X="6.141" Y="2.903" />
+        <Point X="6.141" Y="2.632" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.077" Y="0.393" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="EmployeesSupervised" Type="SelfOneToMany.Models.Employee" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.188" Y="2.632" />
+        <Point X="4.188" Y="3.663" />
+        <Point X="6.812" Y="3.663" />
+        <Point X="6.812" Y="2.632" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.192" Y="1.154" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAEAAAAAAAABEAAAAQAAAAAAAAg=</HashCode>
+      <FileName>Models\DesignModelClasses.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReportsToEmployee" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EmployeesSupervised" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
