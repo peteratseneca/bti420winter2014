@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Secured Local Accounts</h1>
+    <p class="lead">ASP.NET Web Application, which is configured for "Individual User Accounts" authentication</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>This web app example is based on AutoMapperIntro.</p>
+        <p>When the web app was created, "Individual User Accounts" authentication was configured.</p>
+        <p>Look for these features:</p>
+        <ul>
+            <li>Connection string renamed to "DataContext"</li>
+            <li>Store file has a custom name, unique to this application</li>
+            <li>The project template includes login and account management functionality</li>
+            <li>Use the [Authorize] attribute to control behaviour</li>
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Work with the web app</h2>
+        <p>Two user accounts have been created, "peter" and "elliott". Both use an initial password of "password!".</p>
+        <p>You can create your own account(s) if you wish.</p>
+        <p>The "create" functionality (i.e. the methods in the controllers) for both entities (Manufacturer, Vehicle) has been protected by an [Authorize] attribute, so you must be authenticated to create a new object.</p>
+    </div>
+</div>
