@@ -11,6 +11,18 @@ Features:
 - also study the delete pattern rhythm
 - notice the "Details.cshtml" view uses TempData for an edit/delete status message
 
+**DatesAndTimes**
+
+Introduction to working with dates and time on the web.
+
+Features:
+- Simple in-memory object (no persistence)
+- A "product" object, with date and time properties
+- The 'bootstrap datepicker' package was fetched from NuGet
+- The App_Start/BundleConfig.cs file was updated to include that package
+- An 'appHelpers.js' script was added to the 'Scripts' folder; it adds 'datepicker' support to the identified element(s)
+- In the Scripts section in the 'Create.cshtml' view, a reference was made to that script
+
 **ManyToMany**
 
 Introduction to many-to-many assocations.

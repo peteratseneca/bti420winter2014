@@ -1,0 +1,20 @@
+﻿@model Dictionary<string, string>
+
+@{
+    ViewBag.Title = "HardCoded";
+}
+
+<h2>HardCoded</h2>
+
+<table style="width:66%;">
+    <tr><th>Key</th><th>Value</th></tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Key</td>
+            <td>@item.Value</td>
+        </tr>
+    }
+
+</table>
