@@ -1,0 +1,55 @@
+﻿@model EditDeletePattern.Controllers.ManufacturerBase
+
+@{
+    ViewBag.Title = "Details";
+    
+    // Prepare the message that may have been passed in using TempData
+    string statusMessage;
+    if (TempData["statusMessage"] == null)
+    {
+        statusMessage = "";
+    }
+    else
+    {
+        statusMessage = TempData["statusMessage"] as string;
+    }
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ManufacturerBase</h4>
+    <hr />
+    @* Notice the following element that displays a message if passed in using TempData *@
+    <p class="field-validation-error">@statusMessage</p>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YearStarted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YearStarted)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

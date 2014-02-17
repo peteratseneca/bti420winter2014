@@ -1,5 +1,16 @@
 ### Week 6 code examples
 
+**EditDeletePattern**
+
+Implementing the edit and delete coding patterns.
+
+Features:
+- data annotations help drive the display and error messages
+- and also - obviously - input data validation
+- study the edit pattern rhythm; two methods are required
+- also study the delete pattern rhythm
+- notice the "Details.cshtml" view uses TempData for an edit/delete status message
+
 **ManyToMany**
 
 Introduction to many-to-many assocations.
