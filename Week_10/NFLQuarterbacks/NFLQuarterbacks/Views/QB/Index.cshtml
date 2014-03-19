@@ -1,0 +1,99 @@
+﻿@model IEnumerable<NFLQuarterbacks.Controllers.QuarterbackBase>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Player)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Team)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Conference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Completions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Attempts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Touchdowns)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interceptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sacks)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.PhotoUrl)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Player)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Conference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Completions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attempts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Touchdowns)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Interceptions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sacks)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.PhotoUrl)
+        </td>*@
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |*@
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) @*|
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+        </td>
+    </tr>
+}
+
+</table>

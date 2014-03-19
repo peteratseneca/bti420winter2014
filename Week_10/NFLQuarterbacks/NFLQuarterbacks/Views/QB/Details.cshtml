@@ -1,0 +1,114 @@
+﻿@model NFLQuarterbacks.Controllers.QuarterbackBase
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QuarterbackBase</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Rank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Player)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Player)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Team)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Team)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conference)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Conference)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Completions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Completions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attempts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attempts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yards)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yards)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Touchdowns)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Touchdowns)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interceptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interceptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sacks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sacks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhotoUrl)
+        </dt>
+
+        <dd>
+            <img src="@Model.PhotoUrl" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>
